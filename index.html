@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sdl</title>
+    <meta name="description" content="sopa de letra">
+    <meta name="author" content="Adrián Expósito Tofano">
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <span>TAMAÑO: </span>
+        <input type="number" id="size" value="10" min="3" max="99"/>  <span class="separator"> | </span>
+        <span>INTENTOS (PALABRA): </span>
+        <input type="number" id="tries-word" value="1000" min="1" max="10000"/>  <span class="separator"> | </span>
+        <span>INTENTOS (PROCESO): </span>
+        <input type="number" id="tries-process" value="10" min="1" max="1000"/>
+        <br />
+        <span>PALABRAS (separar por espacios): </span>
+        <textarea type="text" id="words">perro gato cigüeña burro</textarea>
+        <br /><br />
+        <button type="button" id="btn-create">GENERAR</button>
+    </div>
+
+    <div id="grid">
+
+    </div>
+
+    <!-- JS Librerias -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- JS Utils -->
+    <script type="text/javascript" src="js/utils-general.js"></script>
+    <script type="text/javascript" src="js/utils-color.js"></script>
+    <script type="text/javascript" src="js/utils-mobile.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

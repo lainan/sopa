@@ -1,0 +1,51 @@
+/*
+AUTOR: Adrián Expósito Tofano
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+
+#grid {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 0;
+    margin: 2em;
+}
+
+.cell {
+    position: relative;
+    display: inline-block;
+    background-color: red;
+    vertical-align: top;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+}
+
+.letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.green {
+    background-color: green;
+}
+
+.invalid {
+    box-shadow: 0 0 2px 0 red;
+    animation: shake 1s linear;
+}
+
+@keyframes shake {
+    from, to                { transform: translate3d(0, 0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate3d(-10px, 0, 0); }
+    20%, 40%, 60%, 80%      { transform: translate3d(10px, 0, 0); }
+}
