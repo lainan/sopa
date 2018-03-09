@@ -18,7 +18,7 @@ function createGrid() {
 
     var words = $('#words').val().split(' ');
     $.each(words, function(i) {
-        words[i] = words[i].toUpperCase();
+        words[i] = words[i].toUpperCase().trim();
     });
     rowSize = $('#size').val();
     totalCells = rowSize * rowSize;
@@ -39,6 +39,7 @@ function createGrid() {
     }
     if (error) {
         $('#size').addClass = 'invalid';
+        return;
     }
 
 
@@ -47,7 +48,7 @@ function createGrid() {
     grid.css('border', gridBorderSize + 'px solid black');
 
 
-    // Clean grid
+    // Create cells
     $('.letter').remove();
     $('.cell').remove();
     for (let i = 0; i < totalCells; i++) {
