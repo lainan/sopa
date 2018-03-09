@@ -72,6 +72,7 @@ function createGrid() {
         }
     }
     console.warn('IMPOSIBLE!');
+    cleanGrid();
 }
 
 function fillCells(words) {
